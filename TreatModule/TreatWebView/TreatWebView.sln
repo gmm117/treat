@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TreatWebView", "TreatWebView\TreatWebView.vcxproj", "{2A76E7CB-B151-4F2B-8CDD-3A52FEE4C8B5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TreatWebViewPS", "TreatWebView\TreatWebViewPS.vcxproj", "{5C03693B-9F0F-46C9-BB77-5E76FAEAEAFD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A76E7CB-B151-4F2B-8CDD-3A52FEE4C8B5} = {2A76E7CB-B151-4F2B-8CDD-3A52FEE4C8B5}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = TreatWebView\\TreatWebView.vcxproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = TreatWebView\\
+		SccProjectUniqueName2 = TreatWebView\\TreatWebViewPS.vcxproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = TreatWebView\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A76E7CB-B151-4F2B-8CDD-3A52FEE4C8B5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2A76E7CB-B151-4F2B-8CDD-3A52FEE4C8B5}.Debug|Win32.Build.0 = Debug|Win32
+		{2A76E7CB-B151-4F2B-8CDD-3A52FEE4C8B5}.Release|Win32.ActiveCfg = Release|Win32
+		{2A76E7CB-B151-4F2B-8CDD-3A52FEE4C8B5}.Release|Win32.Build.0 = Release|Win32
+		{5C03693B-9F0F-46C9-BB77-5E76FAEAEAFD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5C03693B-9F0F-46C9-BB77-5E76FAEAEAFD}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

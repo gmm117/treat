@@ -1,0 +1,36 @@
+// TreatWebView.idl : IDL source for TreatWebView
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (TreatWebView.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(D830A25B-A6E7-4D35-B5D8-EA7794931506),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ITreatHtmlModule : IDispatch{
+	[id(1)] HRESULT ShowWebView(BSTR pbstrData, VARIANT_BOOL* vbResult);
+	[id(2)] HRESULT ChildDestroy();
+};
+[
+	uuid(23730FBF-9EFA-4A6F-8E20-71AFDEFDABA9),
+	version(1.0),
+]
+library TreatWebViewLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(384178EC-C8F7-4B04-9F1D-E78E6118216F)		
+	]
+	coclass TreatHtmlModule
+	{
+		[default] interface ITreatHtmlModule;
+	};
+};
+

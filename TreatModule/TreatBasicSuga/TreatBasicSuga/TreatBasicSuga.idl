@@ -1,0 +1,37 @@
+// TreatBasicSuga.idl : IDL source for TreatBasicSuga
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (TreatBasicSuga.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(C11FA8BB-A07F-47FE-A3C7-B540856F62B1),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ITreatBasicViewModule : IDispatch{
+	[id(1)] HRESULT ShowBasicView([out, retval] VARIANT_BOOL* vbResult);
+	[id(2)] HRESULT ChildDestroy();
+	[id(3)] HRESULT GetTreatEnvData([out] LONG* plHospDiv, [out] BSTR* pbstrStandDate);
+};
+[
+	uuid(5F3AC1CE-BDE1-4229-9893-23781F6F297A),
+	version(1.0),
+]
+library TreatBasicSugaLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(1C53A8C5-C155-4A6E-BFA8-2188D4EA7AEC)		
+	]
+	coclass TreatBasicViewModule
+	{
+		[default] interface ITreatBasicViewModule;
+	};
+};
+

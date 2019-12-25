@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {CBC93756-AC71-4578-876A-B71D4DCDC3D7} = s 'TreatConsultInterface Class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{F97E7D33-9F35-4F4D-81E6-81D0A4083551}'
+			Version = s '1.0'
+		}
+	}
+}

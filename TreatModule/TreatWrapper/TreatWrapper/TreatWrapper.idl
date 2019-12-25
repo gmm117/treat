@@ -1,0 +1,44 @@
+// TreatWrapper.idl : IDL source for TreatWrapper
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (TreatWrapper.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(A3365DD4-A69A-408B-8F2A-6D56FA5FC196),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ITreatWrapperInterface : IDispatch{
+	[id(1)] HRESULT CreateModule([in] IUnknown* pUnkn);
+	[id(2)] HRESULT ChildDestroy();
+	[id(3), local] HRESULT LoadBasicSuga([in] long lHospDiv, [in] BSTR bstrStandDate, [out] BSTR* pvarCode, [out] BSTR* pvarName, [out] BSTR* pvarCost, [in] short nCount, [out, retval] VARIANT_BOOL* pResult);
+	[id(4)] HRESULT GetStandDate([in] long lHospDiv, [out] BSTR* pbstrStandDate);
+	[id(5)] HRESULT GetTotalBasicContSize([out] long* plDataSize);
+	[id(6)] HRESULT GetCurControlSize([in] long lContIdx, [out] long* plCurSize);
+	[id(7)] HRESULT GetCurData([in] long lContIdx, [out] BSTR* pbstrData);
+	[id(8)] HRESULT GetCurContRect([in] long lContIdx, [out] long* plLeft, [out] long* plTop, [out] long* plRight, [out] long* plBottom);
+	[id(9)] HRESULT GetCurContStatic([in] long lContIdx, [out] BSTR* pbstrData);
+	[id(10)] HRESULT GetCurCode([in] long lContIdx, [out] BSTR* pbstrData);
+};
+[
+	uuid(59766BBE-C8C4-4B84-95C7-B0CD27F4426C),
+	version(1.0),
+]
+library TreatWrapperLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(E7308AB9-E0B4-4DC8-9698-4EE6869B66AF)		
+	]
+	coclass TreatWrapperInterface
+	{
+		[default] interface ITreatWrapperInterface;
+	};
+};
+

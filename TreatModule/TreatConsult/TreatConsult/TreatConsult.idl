@@ -1,0 +1,38 @@
+// TreatConsult.idl : IDL source for TreatConsult
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (TreatConsult.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(086BEB2E-59EA-4ABB-9EC9-41DE2B59FEDC),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ITreatConsultInterface : IDispatch{
+	[id(1)] HRESULT CreateModule([in] IUnknown* pUnkn, [in] long lParentHwnd, [in] long lLeft, [in] long lTop, [in] long lRight, [in] long lBottom);
+	[id(2)] HRESULT Show([in] VARIANT_BOOL bShow);
+	[id(3)] HRESULT ChildDestroy();
+	[id(4)] HRESULT RefleshEnvData();
+};
+[
+	uuid(F97E7D33-9F35-4F4D-81E6-81D0A4083551),
+	version(1.0),
+]
+library TreatConsultLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(CBC93756-AC71-4578-876A-B71D4DCDC3D7)		
+	]
+	coclass TreatConsultInterface
+	{
+		[default] interface ITreatConsultInterface;
+	};
+};
+

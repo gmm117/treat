@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {E7308AB9-E0B4-4DC8-9698-4EE6869B66AF} = s 'TreatWrapperInterface Class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{59766BBE-C8C4-4B84-95C7-B0CD27F4426C}'
+			Version = s '1.0'
+		}
+	}
+}
